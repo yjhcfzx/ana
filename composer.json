@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"type": "project",
 	"require": {
-		"laravel/framework": "4.2.*"
+		"laravel/framework": "4.2.*",
+                "tz7/andylib":"dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -17,6 +18,13 @@
 			"app/tests/TestCase.php"
 		]
 	},
+         "repositories": [
+        {   
+            "type": "vcs",
+            "url": "https://github.com/yjhcfzx/andylib.git"
+        }   
+        ],
+     
 	"scripts": {
 		"post-install-cmd": [
 			"php artisan clear-compiled",
@@ -33,5 +41,5 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "dev"
 }

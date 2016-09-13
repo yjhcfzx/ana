@@ -1,5 +1,5 @@
 <?php
-
+use AndyLib\Utility\utility;
 class HomeController extends BaseController {
 
 	/*
@@ -22,6 +22,7 @@ class HomeController extends BaseController {
 	}
         public function showList()
 	{
+            utility::test();
                 $this->layout->content = View::make('home.list');
 		
 	}

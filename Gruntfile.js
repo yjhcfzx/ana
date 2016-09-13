@@ -26,8 +26,12 @@ module.exports = function(grunt) {
     // compile less stylesheets to css -----------------------------------------
     sass: {
       build: {
+          options: {
+                    style: 'compressed',
+                    loadPath: 'node_modules/bootstrap-sass/assets/stylesheets/'
+                },
         files: {
-          'app/assets/dist/css/min.css': ['node_modules/bootstrap-sass/assets/stylesheets/bootstrap.scss','app/assets/scss/app.scss']
+          'app/assets/dist/css/min.css': ['app/assets/scss/app.scss']
         }
       }
     }

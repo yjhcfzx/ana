@@ -23,7 +23,11 @@ class HomeController extends BaseController {
         public function showList()
 	{
             utility::test();
-                $this->layout->content = View::make('home.list');
+            $data = array();
+            $data['controllers'] = array();
+            $controller = array('name'=>'title','label'=>'title','type'=>'text');
+            $data['controllers'][] =  utility::my_generate_controller($controller);
+                $this->layout->content = View::make('home.list',$data);
 		
 	}
 
